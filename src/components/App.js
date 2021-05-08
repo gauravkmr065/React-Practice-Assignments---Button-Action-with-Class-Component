@@ -4,21 +4,20 @@ import '../styles/App.css';
 class App extends Component {
     constructor(props) {
 		super(props);
-	     this.state = {
-	       str: '';
-	     }
+	     this.state = {str: ''}
 	    this.showPara=this.showPara.bind(this);
 	};
     showPara(){
-       paradata = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
-	this.setState({str:paradata});
+		 console.log("click");
+        let paradata = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
+	   this.setState({str:paradata});
     }
 
     render() {
     	return(
     		<div id="main">
 		     <p id="para">{this.state.str}</p>
-                    <button id="click" onClick={showPara}>Click Me</button>
+            <button id="click" onClick={this.showPara}>Click Me</button>
     		</div>
     	);
     }
